@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.personality {
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.personality img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    transition: transform 0.3s;
+}
+
+.personality img:hover {
+    transform: scale(1.1);
+}
+
+.personality h2 {
+    font-size: 18px;
+    color: #555;
+    margin-top: 10px;
+}

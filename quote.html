@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspirational Quote</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quote-container">
+        <h1 id="personality-name"></h1>
+        <img id="personality-img" alt="Personality Image">
+        <p id="quote-text"></p>
+        <button onclick="goBack()">Back</button>
+    </div>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const personality = params.get("person");
+
+        const quotes = {
+            gandhi: {
+                name: "Mahatma Gandhi",
+                img: "gandhi.jpg",
+                quote: "Be the change that you wish to see in the world."
+            },
+            kalam: {
+                name: "Dr. APJ Abdul Kalam",
+                img: "kalam.jpg",
+                quote: "Dream, dream, dream. Dreams transform into thoughts and thoughts result in action."
+            }
+        };
+
+        if (quotes[personality]) {
+            document.getElementById("personality-name").textContent = quotes[personality].name;
+            document.getElementById("personality-img").src = quotes[personality].img;
+            document.getElementById("quote-text").textContent = quotes[personality].quote;
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

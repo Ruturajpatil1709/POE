@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Wonders of the World</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+        .wonder-image {
+            width: 300px;
+            height: 200px;
+            cursor: pointer;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            transition: transform 0.2s;
+        }
+        .wonder-image:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>7 Wonders of the World</h1>
+    <div class="container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHlSLAvpDfsP0AZM7IFqAHsHqGE5i-FYdfSg&s" alt="Wonder 1" class="wonder-image" onclick="showWonderInfo('wonder1.html')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/The_Great_Wall_of_China_at_Jinshanling-edit.jpg/640px-The_Great_Wall_of_China_at_Jinshanling-edit.jpg" alt="Wonder 2" class="wonder-image" onclick="showWonderInfo('wonder2.html')">
+    </div>
+
+    <script>
+        function showWonderInfo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
